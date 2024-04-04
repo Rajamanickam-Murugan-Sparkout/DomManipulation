@@ -4,11 +4,10 @@ let section = document.querySelector('.cart-container');
 
 let content = document.createElement("div");
 section.append(content);
-content.style.padding = '0 1rem'
+content.style.padding = '0 1rem 1rem 1rem'
 section.style.boxShadow = '2px 4px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24)';
 
 section.style.width = '20rem';
-section.style.heading = '100vh'
 body.style.display = "flex";
 body.style.justifyContent = "center";
 let image = document.querySelector('img')
@@ -38,9 +37,16 @@ createButton.style.width = '100%';
 let createButtonId = createButton.setAttribute('id', 'cart-btn');
 let styleBtn = document.querySelector("#cart-btn");
 styleBtn.style.padding = '10px';
-styleBtn.style.marginBottom = '20px';
+styleBtn.style.marginTop = '10px';
 console.log(styleBtn);
 styleBtn.style.backgroundColor = '#7591FF';
 styleBtn.style.border = 'none';
 styleBtn.style.borderRadius = '5px';
 styleBtn.style.color = 'white';
+styleBtn.style.cursor = 'pointer';
+
+
+styleBtn.addEventListener('click', function(){
+    styleBtn.style.backgroundColor = '#57cc99';
+    styleBtn.innerHTML = 'Successfully Added ✅︎';
+})
